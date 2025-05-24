@@ -4,7 +4,7 @@
     <TargetFramework>net471</TargetFramework>
       <AssemblyName>StashSearch</AssemblyName>
       <Description>Search the stash with ease!</Description>
-      <Version>1.4.1</Version>
+      <Version>1.4.2</Version>
       <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
       <LangVersion>latest</LangVersion>
 	  <Nullable>disable</Nullable>
