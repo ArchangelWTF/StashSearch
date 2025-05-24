@@ -14,6 +14,11 @@
 		<TarkovDirectory>D:\FIKA-3.11\DEV</TarkovDirectory>
 	</PropertyGroup>
 
+	<ItemGroup>
+		<PackageReference Include="BepInEx.Core" Version="5.*" />
+		<PackageReference Include="UnityEngine.Modules" Version="2022.3.43" IncludeAssets="compile" />
+	</ItemGroup>
+
     <ItemGroup>
         <Reference Include="Assembly-CSharp">
             <HintPath>$(TarkovDirectory)\EscapeFromTarkov_Data\managed\Assembly-CSharp.dll</HintPath>
@@ -30,15 +35,6 @@
         <Reference Include="Unity.TextMeshPro">
             <HintPath>$(TarkovDirectory)\EscapeFromTarkov_Data\managed\Unity.TextMeshPro.dll</HintPath>
         </Reference>
-        <Reference Include="UnityEngine.AssetBundleModule">
-            <HintPath>$(TarkovDirectory)\EscapeFromTarkov_Data\managed\UnityEngine.AssetBundleModule.dll</HintPath>
-        </Reference>
-        <Reference Include="UnityEngine.CoreModule">
-            <HintPath>$(TarkovDirectory)\EscapeFromTarkov_Data\managed\UnityEngine.CoreModule.dll</HintPath>
-        </Reference>
-        <Reference Include="UnityEngine">
-            <HintPath>$(TarkovDirectory)\EscapeFromTarkov_Data\managed\UnityEngine.dll</HintPath>
-        </Reference>
         <Reference Include="SPT-Reflection">
             <HintPath>$(TarkovDirectory)\BepinEx\Plugins\spt\Spt-Reflection.dll</HintPath>
         </Reference>
@@ -47,24 +43,6 @@
 		</Reference>
         <Reference Include="Sirenix.Serialization">
             <HintPath>$(TarkovDirectory)\EscapeFromTarkov_Data\managed\Sirenix.Serialization.dll</HintPath>
-        </Reference>
-        <Reference Include="0Harmony">
-            <HintPath>$(TarkovDirectory)\BepinEx\Core\0Harmony.dll</HintPath>
-        </Reference>
-        <Reference Include="BepinEx">
-            <HintPath>$(TarkovDirectory)\BepinEx\Core\BepInEx.dll</HintPath>
-        </Reference>
-        <Reference Include="BepinEx.Preloader">
-            <HintPath>$(TarkovDirectory)\BepinEx\Core\BepInEx.Preloader.dll</HintPath>
-        </Reference>
-        <Reference Include="UnityEngine.IMGUIModule">
-            <HintPath>$(TarkovDirectory)\EscapeFromTarkov_Data\managed\UnityEngine.IMGUIModule.dll</HintPath>
-        </Reference>
-        <Reference Include="UnityEngine.InputLegacyModule">
-            <HintPath>$(TarkovDirectory)\EscapeFromTarkov_Data\managed\UnityEngine.InputLegacyModule.dll</HintPath>
-        </Reference>
-        <Reference Include="UnityEngine.TextRenderingModule">
-          <HintPath>$(TarkovDirectory)\EscapeFromTarkov_Data\managed\UnityEngine.TextRenderingModule.dll</HintPath>
         </Reference>
         <Reference Include="UnityEngine.UI">
             <HintPath>$(TarkovDirectory)\EscapeFromTarkov_Data\managed\UnityEngine.UI.dll</HintPath>
