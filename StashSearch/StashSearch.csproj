@@ -4,81 +4,79 @@
     <TargetFramework>net471</TargetFramework>
       <AssemblyName>StashSearch</AssemblyName>
       <Description>Search the stash with ease!</Description>
-      <Version>1.1.1</Version>
+      <Version>1.4.1</Version>
       <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
       <LangVersion>latest</LangVersion>
 	  <Nullable>disable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Compile Remove="dependencies\**" />
-    <EmbeddedResource Remove="dependencies\**" />
-    <None Remove="dependencies\**" />
-  </ItemGroup>
+	<PropertyGroup>
+		<TarkovDirectory>D:\FIKA-3.11\DEV</TarkovDirectory>
+	</PropertyGroup>
 
     <ItemGroup>
         <Reference Include="Assembly-CSharp">
-            <HintPath>..\..\..\EscapeFromTarkov_Data\managed\Assembly-CSharp.dll</HintPath>
+            <HintPath>$(TarkovDirectory)\EscapeFromTarkov_Data\managed\Assembly-CSharp.dll</HintPath>
         </Reference>
         <Reference Include="bsg.console.core">
-            <HintPath>..\..\..\EscapeFromTarkov_Data\managed\bsg.console.core.dll</HintPath>
+            <HintPath>$(TarkovDirectory)\EscapeFromTarkov_Data\managed\bsg.console.core.dll</HintPath>
         </Reference>
         <Reference Include="Comfort">
-            <HintPath>..\..\..\EscapeFromTarkov_Data\managed\Comfort.dll</HintPath>
+            <HintPath>$(TarkovDirectory)\EscapeFromTarkov_Data\managed\Comfort.dll</HintPath>
         </Reference>
         <Reference Include="ItemComponent.Types">
-            <HintPath>..\..\..\EscapeFromTarkov_Data\managed\ItemComponent.Types.dll</HintPath>
+            <HintPath>$(TarkovDirectory)\EscapeFromTarkov_Data\managed\ItemComponent.Types.dll</HintPath>
         </Reference>
         <Reference Include="Unity.TextMeshPro">
-            <HintPath>..\..\..\EscapeFromTarkov_Data\managed\Unity.TextMeshPro.dll</HintPath>
+            <HintPath>$(TarkovDirectory)\EscapeFromTarkov_Data\managed\Unity.TextMeshPro.dll</HintPath>
         </Reference>
         <Reference Include="UnityEngine.AssetBundleModule">
-            <HintPath>..\..\..\EscapeFromTarkov_Data\managed\UnityEngine.AssetBundleModule.dll</HintPath>
+            <HintPath>$(TarkovDirectory)\EscapeFromTarkov_Data\managed\UnityEngine.AssetBundleModule.dll</HintPath>
         </Reference>
         <Reference Include="UnityEngine.CoreModule">
-            <HintPath>..\..\..\EscapeFromTarkov_Data\managed\UnityEngine.CoreModule.dll</HintPath>
+            <HintPath>$(TarkovDirectory)\EscapeFromTarkov_Data\managed\UnityEngine.CoreModule.dll</HintPath>
         </Reference>
         <Reference Include="UnityEngine">
-            <HintPath>..\..\..\EscapeFromTarkov_Data\managed\UnityEngine.dll</HintPath>
+            <HintPath>$(TarkovDirectory)\EscapeFromTarkov_Data\managed\UnityEngine.dll</HintPath>
         </Reference>
         <Reference Include="SPT-Reflection">
-            <HintPath>..\..\..\BepinEx\Plugins\spt\Spt-Reflection.dll</HintPath>
+            <HintPath>$(TarkovDirectory)\BepinEx\Plugins\spt\Spt-Reflection.dll</HintPath>
         </Reference>
 		<Reference Include="SPT-Common">
-			<HintPath>..\..\..\BepinEx\Plugins\spt\SPT-Common.dll</HintPath>
+			<HintPath>$(TarkovDirectory)\BepinEx\Plugins\spt\SPT-Common.dll</HintPath>
 		</Reference>
         <Reference Include="Sirenix.Serialization">
-            <HintPath>..\..\..\EscapeFromTarkov_Data\managed\Sirenix.Serialization.dll</HintPath>
+            <HintPath>$(TarkovDirectory)\EscapeFromTarkov_Data\managed\Sirenix.Serialization.dll</HintPath>
         </Reference>
         <Reference Include="0Harmony">
-            <HintPath>..\..\..\BepinEx\Core\0Harmony.dll</HintPath>
+            <HintPath>$(TarkovDirectory)\BepinEx\Core\0Harmony.dll</HintPath>
         </Reference>
         <Reference Include="BepinEx">
-            <HintPath>..\..\..\BepinEx\Core\BepInEx.dll</HintPath>
+            <HintPath>$(TarkovDirectory)\BepinEx\Core\BepInEx.dll</HintPath>
         </Reference>
         <Reference Include="BepinEx.Preloader">
-            <HintPath>..\..\..\BepinEx\Core\BepInEx.Preloader.dll</HintPath>
+            <HintPath>$(TarkovDirectory)\BepinEx\Core\BepInEx.Preloader.dll</HintPath>
         </Reference>
         <Reference Include="UnityEngine.IMGUIModule">
-            <HintPath>..\..\..\EscapeFromTarkov_Data\managed\UnityEngine.IMGUIModule.dll</HintPath>
+            <HintPath>$(TarkovDirectory)\EscapeFromTarkov_Data\managed\UnityEngine.IMGUIModule.dll</HintPath>
         </Reference>
         <Reference Include="UnityEngine.InputLegacyModule">
-            <HintPath>..\..\..\EscapeFromTarkov_Data\managed\UnityEngine.InputLegacyModule.dll</HintPath>
+            <HintPath>$(TarkovDirectory)\EscapeFromTarkov_Data\managed\UnityEngine.InputLegacyModule.dll</HintPath>
         </Reference>
         <Reference Include="UnityEngine.TextRenderingModule">
-          <HintPath>..\..\..\EscapeFromTarkov_Data\managed\UnityEngine.TextRenderingModule.dll</HintPath>
+          <HintPath>$(TarkovDirectory)\EscapeFromTarkov_Data\managed\UnityEngine.TextRenderingModule.dll</HintPath>
         </Reference>
         <Reference Include="UnityEngine.UI">
-            <HintPath>..\..\..\EscapeFromTarkov_Data\managed\UnityEngine.UI.dll</HintPath>
+            <HintPath>$(TarkovDirectory)\EscapeFromTarkov_Data\managed\UnityEngine.UI.dll</HintPath>
         </Reference>
         <Reference Include="UnityEngine.UIModule">
-            <HintPath>..\..\..\EscapeFromTarkov_Data\managed\UnityEngine.UIModule.dll</HintPath>
+            <HintPath>$(TarkovDirectory)\EscapeFromTarkov_Data\managed\UnityEngine.UIModule.dll</HintPath>
         </Reference>
     </ItemGroup>
 
 
     <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-        <Exec Command="copy &quot;$(TargetPath)&quot; &quot;..\..\..\BepInEx\plugins\StashSearch\$(TargetName).dll&quot;&#xD;&#xA;if $(ConfigurationName) == Debug (&#xD;&#xA;    copy &quot;$(ProjectDir)$(OutDir)$(TargetName).pdb&quot; &quot;..\..\..\BepInEx\plugins\StashSearch\$(TargetName).pdb&quot;&#xD;&#xA;) else (&#xD;&#xA;    del &quot;..\..\..\BepInEx\plugins\StashSearch\$(TargetName).pdb&quot;&#xD;&#xA;)&#xD;&#xA;&#xD;&#xA;del &quot;..\..\..\BepInEx\config\com.dirtbikercj.StashSearch.cfg&quot;&#xD;&#xA;&#xD;&#xA;xcopy &quot;$(ProjectDir)Prefab\StashSearch.bundle&quot; &quot;..\..\..\BepInEx\plugins\StashSearch\&quot; /Y" />
+        <Exec Command="copy &quot;$(TargetPath)&quot; &quot;$(TarkovDirectory)\BepInEx\plugins\StashSearch\$(TargetName).dll&quot;&#xD;&#xA;if $(ConfigurationName) == Debug (&#xD;&#xA;    copy &quot;$(ProjectDir)$(OutDir)$(TargetName).pdb&quot; &quot;$(TarkovDirectory)\BepInEx\plugins\StashSearch\$(TargetName).pdb&quot;&#xD;&#xA;) else (&#xD;&#xA;    del &quot;$(TarkovDirectory)\BepInEx\plugins\StashSearch\$(TargetName).pdb&quot;&#xD;&#xA;)&#xD;&#xA;&#xD;&#xA;del &quot;$(TarkovDirectory)\BepInEx\config\com.dirtbikercj.StashSearch.cfg&quot;&#xD;&#xA;&#xD;&#xA;xcopy &quot;$(ProjectDir)Prefab\StashSearch.bundle&quot; &quot;$(TarkovDirectory)\BepInEx\plugins\StashSearch\&quot; /Y" />
     </Target>
 
 
