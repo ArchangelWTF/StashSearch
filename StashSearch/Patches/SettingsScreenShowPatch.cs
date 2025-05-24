@@ -15,6 +15,6 @@ public class SettingsScreenShowPatch : ModulePatch
     [PatchPostfix]
     public static void Postfix(SettingsScreen __instance)
     {
-        Plugin.Instance.AttachToSettingsScreen(__instance);
+        //Plugin.Instance.AttachToSettingsScreen(__instance);
     }
 }
